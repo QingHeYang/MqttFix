@@ -1,0 +1,3 @@
+-keep class org.eclipse.paho.** { *; }
+-keep class androidx.work.** { *; }
+-keep class androidx.localbroadcastmanager.** { *; }
