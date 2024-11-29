@@ -1,5 +1,5 @@
 # MqttFix_simple
-
+| 中文 | [English](README.md) |
 
 MqttFix项目是[paho.mqtt.android](https://github.com/eclipse-paho/paho.mqtt.android)的替代品
 主要解决版本 android api 31以上 兼容问题  
