@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.library' // 用于构建 Android 库
-    id 'maven-publish'       // 用于将库发布到 Maven 仓库
 }
 
 android {
@@ -9,8 +8,6 @@ android {
 
     defaultConfig {
         minSdk 24 // 设置最低支持的 SDK 版本
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro" // 添加 consumer Proguard 配置
     }
 
