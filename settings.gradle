@@ -16,5 +16,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MqttFix_simple"
-include ':app'
 include ':mqttfix'

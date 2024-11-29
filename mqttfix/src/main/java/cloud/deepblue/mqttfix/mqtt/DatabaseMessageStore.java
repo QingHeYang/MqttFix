@@ -15,6 +15,7 @@
  */
 package cloud.deepblue.mqttfix.mqtt;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -329,18 +330,18 @@ class DatabaseMessageStore implements MessageStore {
 
 			@Override
 			public StoredMessage next() {
-				String messageId = c.getString(c
+				@SuppressLint("Range") String messageId = c.getString(c
 						.getColumnIndex(MqttServiceConstants.MESSAGE_ID));
-				String clientHandle = c.getString(c
+				@SuppressLint("Range") String clientHandle = c.getString(c
 						.getColumnIndex(MqttServiceConstants.CLIENT_HANDLE));
-				String topic = c.getString(c
+				@SuppressLint("Range") String topic = c.getString(c
 						.getColumnIndex(MqttServiceConstants.DESTINATION_NAME));
-				byte[] payload = c.getBlob(c
+				@SuppressLint("Range") byte[] payload = c.getBlob(c
 						.getColumnIndex(MqttServiceConstants.PAYLOAD));
-				int qos = c.getInt(c.getColumnIndex(MqttServiceConstants.QOS));
-				boolean retained = Boolean.parseBoolean(c.getString(c
+				@SuppressLint("Range") int qos = c.getInt(c.getColumnIndex(MqttServiceConstants.QOS));
+				@SuppressLint("Range") boolean retained = Boolean.parseBoolean(c.getString(c
 						.getColumnIndex(MqttServiceConstants.RETAINED)));
-				boolean dup = Boolean.parseBoolean(c.getString(c
+				@SuppressLint("Range") boolean dup = Boolean.parseBoolean(c.getString(c
 						.getColumnIndex(MqttServiceConstants.DUPLICATE)));
 
 				// build the result
