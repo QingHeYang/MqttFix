@@ -43,6 +43,7 @@ afterEvaluate {
                 groupId = 'com.github.QingHeYang'
                 artifactId = 'MqttFix'
                 version = '1.0.2'
+                artifact("$buildDir/outputs/aar/MqttFix-release.aar")
             }
 
         }
