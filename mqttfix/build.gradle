@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library' // 用于构建 Android 库
+    id 'maven-publish'
 }
 
 android {
@@ -13,8 +14,12 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false // 关闭代码混淆
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // 添加 Proguard 配置
+        }
+        debug {
+            minifyEnabled false // 关闭代码混淆
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // 添加 Proguard 配置
         }
     }
 
@@ -28,4 +33,18 @@ dependencies {
     implementation "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5" // MQTT 客户端依赖
     implementation 'androidx.work:work-runtime:2.7.1' // WorkManager 依赖
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0' // LocalBroadcastManager 依赖
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.findByName('release')
+                groupId = 'com.github.QingHeYang'
+                artifactId = 'MqttFix'
+                version = '1.0.2'
+            }
+
+        }
+    }
 }
