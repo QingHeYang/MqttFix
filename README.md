@@ -18,7 +18,7 @@ The issues addressed by the original project include:
 implementation "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5" // Original Mqtt dependency  
 implementation 'androidx.work:work-runtime:2.7.1' // WorkManager  
 implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0' // Replace v4 & do not use 1.1.0  
-implementation 'com.github.QingHeYang:MqttFix:1.0.3-fix2'
+implementation 'com.github.QingHeYang:MqttFix:1.0.3-fix3'
 ```
 
 2. Permissions
