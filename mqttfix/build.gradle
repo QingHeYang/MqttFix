@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'cloud.deepblue.mqttfix' // 设置库的命名空间
-    compileSdk 31
+    compileSdk 35
 
     defaultConfig {
         minSdk 24 // 设置最低支持的 SDK 版本
